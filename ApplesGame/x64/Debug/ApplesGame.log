@@ -1,0 +1,11 @@
+﻿  Apple.cpp
+  Game.cpp
+  GameMain.cpp
+  InputHandlers.cpp
+  Math.cpp
+  Player.cpp
+  Rock.cpp
+  Sound.cpp
+  UI.cpp
+  Generating Code...
+  ApplesGame.vcxproj -> J:\Resource_PROJECT\learn\xyz\ApplesFalko\GameApplesFalko\ApplesGame\x64\Debug\ApplesGame.exe

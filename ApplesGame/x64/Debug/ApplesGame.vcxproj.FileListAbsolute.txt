@@ -1,0 +1,3 @@
+J:\Resource_PROJECT\learn\xyz\xyz-cpp-course-lesson-1-4-4\ApplesGame\x64\Debug\ApplesGame.exe
+J:\Resource_PROJECT\learn\xyz\ApplesFalko\ApplesGame\x64\Debug\ApplesGame.exe
+J:\Resource_PROJECT\learn\xyz\ApplesFalko\GameApplesFalko\ApplesGame\x64\Debug\ApplesGame.exe
