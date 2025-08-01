@@ -30,6 +30,15 @@ namespace ApplesGame
 	{
 		player.direction = direction;
 
+		if (direction == Direction::Left)
+		{
+			SetSpriteSize(player.sprite, PLAYER_SIZE, -PLAYER_SIZE);
+		}
+		else
+		{
+			SetSpriteSize(player.sprite, PLAYER_SIZE, PLAYER_SIZE);
+		}
+
 		switch (direction)
 		{
 		case Direction::Right:

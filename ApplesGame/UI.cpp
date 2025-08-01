@@ -39,14 +39,16 @@ namespace ApplesGame
 		// Init UI sprites
 		InitSprite(ui.mainMenuSprite, game.mainMenueTexture, 0.38f, 0.35f);
 		InitSprite(ui.gameOverSprite, game.gameOverTexture, 0.75f, 0.35f);
+		InitSprite(ui.winSprite, game.winTexture, 0.65f, 0.35f);
 
 		// Init UI shapes
 		InitButton(ui.upAppleButton, sf::Color::Green, 0.7f, 0.2f);
 		InitButton(ui.downAppleButton, sf::Color::Red, 0.7f, 0.35f);
 		InitButton(ui.startButton, sf::Color::Red, 0.7f, 0.4f);
-		InitButton(ui.speedUpButton, sf::Color::Green, 1.0f, 0.2f);
+		InitButton(ui.eatAllButton, sf::Color::Green, 1.0f, 0.2f);
+		InitButton(ui.speedUpButton, sf::Color::Green, 1.0f, 0.25f);
 		InitButton(ui.rocksSpawnButton, sf::Color::Green, 1.0f, 0.3f);
-		InitButton(ui.xButton, sf::Color::Red, 1.0f, 0.4f);
+		InitButton(ui.xButton, sf::Color::Red, 1.0f, 0.35f);
 
 		// Init UI text
 		InitText(ui.gameText, game.font, SCORE_TITLE, sf::Color::Yellow, SCREEN_WIDTH - 250.0f, 5.0f);
@@ -56,9 +58,10 @@ namespace ApplesGame
 		InitText(ui.upAppleText, game.font, UP_APPLE_TITLE, sf::Color::White, SCREEN_HEIGHT * 0.7f, SCREEN_WIDTH * 0.2f);
 		InitText(ui.downAppleText, game.font, DOWN_APPLE_TITLE, sf::Color::White, SCREEN_HEIGHT * 0.7f, SCREEN_WIDTH * 0.35f);
 		InitText(ui.startText, game.font, START_TITLE, sf::Color::White, SCREEN_HEIGHT * 0.7f, SCREEN_WIDTH * 0.4f);
-		InitText(ui.speedUpText, game.font, SPEED_UP_TITLE, sf::Color::White, SCREEN_HEIGHT * 1.0f, SCREEN_WIDTH * 0.2f);
+		InitText(ui.eatAllText, game.font, EAT_ALL_TITLE, sf::Color::White, SCREEN_HEIGHT * 1.0f, SCREEN_WIDTH * 0.2f);
+		InitText(ui.speedUpText, game.font, SPEED_UP_TITLE, sf::Color::White, SCREEN_HEIGHT * 1.0f, SCREEN_WIDTH * 0.25f);
 		InitText(ui.rocksSpawnText, game.font, ROCKS_SPAWN_TITLE, sf::Color::White, SCREEN_HEIGHT * 1.0f, SCREEN_WIDTH * 0.3f);
-		InitText(ui.xText, game.font, X_BUTTON_TITLE, sf::Color::White, SCREEN_HEIGHT * 1.0f, SCREEN_WIDTH * 0.4f);
+		InitText(ui.xText, game.font, X_BUTTON_TITLE, sf::Color::White, SCREEN_HEIGHT * 1.0f, SCREEN_WIDTH * 0.35f);
 		InitText(ui.applesInGame, game.font, APPLES_TITLE + std::to_string(game.applesInGame), sf::Color::Green, SCREEN_HEIGHT * 0.7f, SCREEN_WIDTH * 0.28f);
 	}
 	//-----------------------------------------------------------------------------------------------------------
@@ -72,6 +75,8 @@ namespace ApplesGame
 		window.draw(ui.downAppleText);
 		window.draw(ui.startButton);
 		window.draw(ui.startText);
+		window.draw(ui.eatAllButton);
+		window.draw(ui.eatAllText);
 		window.draw(ui.speedUpButton);
 		window.draw(ui.speedUpText);
 		window.draw(ui.rocksSpawnButton);
@@ -93,6 +98,14 @@ namespace ApplesGame
 		window.clear();
 		window.draw(ui.gameText);
 		window.draw(ui.gameOverSprite);
+		window.draw(ui.gameOverText);
+		window.display();
+	}
+	//-----------------------------------------------------------------------------------------------------------
+	void DrawWin(UI& ui, sf::RenderWindow& window)
+	{
+		window.clear();
+		window.draw(ui.winSprite);
 		window.draw(ui.gameOverText);
 		window.display();
 	}

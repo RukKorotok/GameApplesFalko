@@ -17,6 +17,7 @@ namespace ApplesGame
 	const std::string UP_APPLE_TITLE = " + Apples [Up]";
 	const std::string DOWN_APPLE_TITLE = " - Apples [Down]";
 	const std::string START_TITLE = "START [ENTER]";
+	const std::string EAT_ALL_TITLE = "Eat All Mode [E]";
 	const std::string SPEED_UP_TITLE = "Speed UP [S]";
 	const std::string ROCKS_SPAWN_TITLE = "Rocks SPAWN [R]";
 	const std::string X_BUTTON_TITLE = "X-3 HARD [H]";
@@ -40,6 +41,7 @@ namespace ApplesGame
 	const sf::Keyboard::Key PAUSE = sf::Keyboard::Key::Space;
 	const sf::Keyboard::Key START = sf::Keyboard::Key::Enter;
 	const sf::Keyboard::Key EXIT = sf::Keyboard::Key::Escape;
+	const sf::Keyboard::Key EAT_ALL_MODE = sf::Keyboard::Key::E;
 	const sf::Keyboard::Key SPEED_UP_MODE = sf::Keyboard::Key::S;
 	const sf::Keyboard::Key ROCKS_UP_MODE = sf::Keyboard::Key::R;
 	const sf::Keyboard::Key HARD_MODE = sf::Keyboard::Key::H;

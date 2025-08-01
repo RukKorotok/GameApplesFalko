@@ -15,6 +15,7 @@ namespace ApplesGame
 		Direction direction = Direction::Right;
 		sf::Sprite mainMenuSprite;
 		sf::Sprite gameOverSprite;
+		sf::Sprite winSprite;
 		sf::Text gameText;
 		sf::Text timeInGameText;
 		sf::Text gameOverText;
@@ -23,6 +24,7 @@ namespace ApplesGame
 		sf::Text upAppleText;
 		sf::Text downAppleText;
 		sf::Text startText;
+		sf::Text eatAllText;
 		sf::Text speedUpText;
 		sf::Text rocksSpawnText;
 		sf::Text xText;
@@ -30,6 +32,7 @@ namespace ApplesGame
 		sf::RectangleShape upAppleButton;
 		sf::RectangleShape downAppleButton;
 		sf::RectangleShape startButton;
+		sf::RectangleShape eatAllButton;
 		sf::RectangleShape speedUpButton;
 		sf::RectangleShape rocksSpawnButton;
 		sf::RectangleShape xButton;
@@ -45,6 +48,7 @@ namespace ApplesGame
 	void DrawMainMenu(UI& ui, sf::RenderWindow& window);
 	void DrawPause(UI& ui, sf::RenderWindow& window);
 	void DrawGameOver(UI& ui, sf::RenderWindow& window);
+	void DrawWin(UI& ui, sf::RenderWindow& window);
 	void DrawGameUI(Game& game, sf::RenderWindow& window);
 
 	void SetStringInText(sf::Text& text, std::string string);

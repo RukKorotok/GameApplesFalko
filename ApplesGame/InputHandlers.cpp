@@ -26,12 +26,13 @@ namespace ApplesGame
 		}
 	}
 	//------------------------------------------------------------------------------------------------------------
-	void HandleInputAfterGameOver(Game& game)
+	void HandleInputOnGameStoped(Game& game)
 	{
 		if (sf::Keyboard::isKeyPressed(YES) )
 		{
 			game.state = State::MainMenu;
 			StopSound(game.audio.death);
+			StopSound(game.audio.win);
 		}
 		else if (sf::Keyboard::isKeyPressed(NO) )
 		{
@@ -64,6 +65,12 @@ namespace ApplesGame
 			{
 				StartGame(game);
 				StopSound(game.audio.intro);
+
+				return true;
+			}
+			else if (sf::Keyboard::isKeyPressed(EAT_ALL_MODE))
+			{
+				ChangeGameMode(game, GameMode::EatAll);
 
 				return true;
 			}

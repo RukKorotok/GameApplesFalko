@@ -6,6 +6,7 @@ namespace ApplesGame
 	struct Audio
 	{
 		sf::Sound eat;
+		sf::Sound win;
 		sf::Sound death;
 		sf::Sound intro;
 		sf::Sound pause;

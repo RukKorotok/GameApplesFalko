@@ -20,7 +20,8 @@ namespace ApplesGame
 		InProgress,
 		Paused,
 		GameOver,
-		ExitGame
+		ExitGame,
+		Win
 	};
 
 	enum class GameMode
@@ -28,6 +29,7 @@ namespace ApplesGame
 		SpeedUp = 1 << 0,
 		RocksUp = 1 << 1,
 		HardCore = 1 << 2,
+		EatAll = 1 << 3,
 	};
 
 	struct Game
@@ -35,10 +37,11 @@ namespace ApplesGame
 		// Game objects
 		UI ui;
 		Player player;
-		int rocksInGame = 0;
+		int rocksInField = 0;
+		int applesInField = 0;
 		int applesInGame = 10;
-		std::shared_ptr<Apple[]> apples;
-		std::shared_ptr<Rock[]> rocks;
+		std::unique_ptr<Apple[]> apples;
+		std::unique_ptr<Rock[]> rocks;
 
 		// Global game data
 		int numEatenApples = 0;
@@ -53,7 +56,9 @@ namespace ApplesGame
 		sf::Texture appleTexture;
 		sf::Texture mainMenueTexture;
 		sf::Texture gameOverTexture;
+		sf::Texture winTexture;
 		sf::SoundBuffer eatAppleWave;
+		sf::SoundBuffer winWave;
 		sf::SoundBuffer deathWave;
 		sf::SoundBuffer introWave;
 		sf::SoundBuffer pauseWave;
@@ -63,6 +68,7 @@ namespace ApplesGame
 	void InitGame(Game& game);
 	void StartGame(Game& game);
 	void GameOver(Game& game);
+	void Win(Game& game);
 	void ExitFromGame(sf::RenderWindow& window);
 	void EatApple(Game& game, int appleNumber);
 	void UpdateGame(Game& game, float deltaTime);

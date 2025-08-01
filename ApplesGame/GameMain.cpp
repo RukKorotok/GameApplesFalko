@@ -120,7 +120,19 @@ int main()
 				currentState = game.state;
 			}
 			GameOver(game);
-			HandleInputAfterGameOver(game);
+			HandleInputOnGameStoped(game);
+			break;
+		}
+		case State::Win:
+		{
+			if (currentState != game.state)
+			{
+				DrawWin(game.ui, window);
+				PlaySound(game.audio.win);
+				currentState = game.state;
+			}
+			Win(game);
+			HandleInputOnGameStoped(game);
 			break;
 		}
 		case State::ExitGame:
